@@ -15,6 +15,8 @@ Trivy has scanners that look for security issues, and targets where it can find 
 - command scan docker image
 ```
 trivy image node:20.15.0-alpine
+
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image node:20.15.0-alpine
 ```
 
 ---
@@ -27,6 +29,8 @@ docker build -t demo-trivy-account-api:01 .
 - trivy scan
 ```
 trivy image demo-trivy-account-api:01
+
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image demo-trivy-account-api:01
 ```
 
 ---
@@ -43,3 +47,4 @@ Number	Severity
 - https://trivy.dev/
 - https://github.com/aquasecurity/trivy
 - https://aquasecurity.github.io/trivy/v0.55/docs/target/container_image/
+

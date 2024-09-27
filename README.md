@@ -21,7 +21,6 @@ trivy image node:20.15.0-alpine
 
 - build account-api
 ```
-cd /account-api
 docker build -t demo-trivy-account-api:01 .
 ```
 
